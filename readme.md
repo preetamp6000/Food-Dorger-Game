@@ -1,4 +1,4 @@
-# 🍎 Food Catch Game
+# 🍎 Food Dorger Game
 
 A simple browser game where you catch falling food and avoid bombs. Built with **HTML, CSS & JavaScript**.
 
