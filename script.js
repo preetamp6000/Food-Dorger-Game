@@ -1,4 +1,4 @@
-// Access existing elements
+
 const player = document.getElementById("player");
 const game = document.querySelector(".game");
 const scoreDisplay = document.getElementById("score");
@@ -20,14 +20,14 @@ const foodSound = new Audio("assets/eat.mp3");
 const boomSound = new Audio("assets/blast.mp3");
 const levelUpSound = new Audio("assets/levelpass.mp3");
 
-let lastFoodSoundTime = 0; // To avoid food sound overlap
+let lastFoodSoundTime = 0; 
 
-// Update score display with food count, best score, and level
+
 function updateScoreDisplay() {
     scoreDisplay.textContent = `Food: ${foodCount} | Best: ${bestScore} | Level: ${level}`;
 }
 
-// Handle player movement on desktop and mobile
+
 function handleMove(event) {
     const gameBounds = game.getBoundingClientRect();
     let x = (event.touches ? event.touches[0].clientX : event.clientX) - gameBounds.left - player.offsetWidth / 2;
@@ -37,12 +37,12 @@ function handleMove(event) {
 game.addEventListener("mousemove", handleMove);
 game.addEventListener("touchmove", handleMove);
 
-// Function to spawn food or bomb objects
+
 function spawnObject() {
     if (isGameOver) return;
 
-    // Adjust bomb probability for less frequent spawn
-    const isFood = Math.random() < 0.8; // Increase chance of food spawn to 80%
+   
+    const isFood = Math.random() < 0.8; 
     const obj = document.createElement("div");
     obj.classList.add(isFood ? "food" : "boom");
     obj.style.left = `${Math.random() * (game.offsetWidth - 30)}px`;
@@ -53,7 +53,7 @@ function spawnObject() {
     checkCollision(obj, isFood);
 }
 
-// Check for collisions between player and food/bombs
+
 function checkCollision(obj, isFood) {
     const checkInterval = setInterval(() => {
         const objBounds = obj.getBoundingClientRect();
@@ -84,7 +84,7 @@ function checkCollision(obj, isFood) {
     }, 100);
 }
 
-// Level up when food count reaches multiples of 10
+
 function checkLevelUp() {
     if (foodCount > 0 && foodCount % 10 === 0) {
         level++;
@@ -97,7 +97,7 @@ function checkLevelUp() {
     }
 }
 
-// Visual indicator for level up
+
 function showLevelLine() {
     const levelLine = document.createElement("div");
     levelLine.classList.add("level-line");
@@ -105,7 +105,7 @@ function showLevelLine() {
     setTimeout(() => levelLine.remove(), 1000);
 }
 
-// Start the game
+
 function startGame() {
     isGameOver = false;
     foodCount = 0;
@@ -118,7 +118,7 @@ function startGame() {
     spawnInterval = setInterval(spawnObject, 1000);
 }
 
-// End the game and show Game Over screen
+
 function endGame() {
     if (isGameOver) return;
     isGameOver = true;
@@ -127,16 +127,16 @@ function endGame() {
 
     if (foodCount > bestScore) {
         bestScore = foodCount;
-        newBestScoreMessage.textContent = `Congratulations! New Best Score: ${bestScore}`; // Show congratulatory message
-        newBestScoreMessage.classList.remove("hidden"); // Display congratulatory message
+        newBestScoreMessage.textContent = `Congratulations! New Best Score: ${bestScore}`; 
+        newBestScoreMessage.classList.remove("hidden"); 
     } else {
-        newBestScoreMessage.classList.add("hidden"); // Hide message if not best score
+        newBestScoreMessage.classList.add("hidden"); 
     }
     gameOverScreen.classList.remove("hidden");
     document.querySelectorAll(".food, .boom").forEach(obj => obj.remove());
 }
 
-// Restart the game
+
 function restartGame() {
     gameOverScreen.classList.add("hidden");
     startGame();

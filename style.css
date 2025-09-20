@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f9;
@@ -12,7 +12,7 @@ body {
     flex-direction: column;
 }
 
-/* Game Container */
+
 .game {
     width: 400px;
     height: 600px;
@@ -23,7 +23,7 @@ body {
     overflow: hidden;
 }
 
-/* Player (catcher) */
+
 #player {
     width: 50px;
     height: 50px;
@@ -36,7 +36,7 @@ body {
     box-shadow: 0px 5px 15px rgba(255, 111, 97, 0.6);
 }
 
-/* Score Display */
+
 #score {
     color: #ecf0f1;
     position: absolute;
@@ -46,7 +46,7 @@ body {
     font-weight: bold;
 }
 
-/* Game Over Screen */
+
 #game-over {
     color: #ecf0f1;
     text-align: center;
@@ -72,7 +72,7 @@ body {
     background-color: #2ecc71;
 }
 
-/* Start Screen */
+
 #start-screen {
     text-align: center;
 }
@@ -98,12 +98,12 @@ body {
     background-color: #2980b9;
 }
 
-/* Hidden Class */
+
 .hidden {
     display: none;
 }
 
-/* Food and Bombs */
+
 .food, .boom {
     width: 30px;
     height: 30px;
@@ -115,20 +115,20 @@ body {
 .food {
     background-size: cover;
     background-position: center;
-    background-color: #fff; /* For fallback */
+    background-color: #fff; 
 }
 
 .boom {
     background-color: #e74c3c;
 }
 
-/* Food Falling Animation */
+
 @keyframes fall {
     0% { top: -30px; }
     100% { top: 100%; }
 }
 
-/* Level Up Indicator */
+
 .level-line {
     position: absolute;
     width: 100%;
@@ -138,7 +138,7 @@ body {
     opacity: 0.8;
 }
 
-/* Smooth Animation for Food/Bomb Fall */
+
 .food, .boom {
     transition: transform 0.3s ease-in-out;
 }

@@ -1,36 +1,32 @@
 # 🍎 Food Catch Game
 
-A simple browser-based game where you control a player (a box) to catch falling food and avoid bombs.  
-Built using **HTML, CSS, and JavaScript**.
+A simple browser game where you catch falling food and avoid bombs. Built with **HTML, CSS & JavaScript**.
 
 ---
 
 ## 🎮 How to Play
-- Use **left** and **right arrow keys** to move the player.  
-- Catch the falling **food items** to score points.  
-- Avoid the **bombs** — hitting one ends the game.  
-- The game tracks your **best score** and increases the level as you progress.
+- Move the player **left/right** using **mouse** or **touch**.  
+- Catch **food** to score points.  
+- Avoid **bombs** – collision ends the game.  
+- Score and **level** increase as you play.
 
 ---
 
 ## 🚀 Features
-- Start screen & restart option.  
-- Scoreboard with current, best score, and level.  
-- Smooth animations for falling food & bombs.  
-- Game-over screen with final score.  
+- Start & restart screen  
+- Scoreboard: current, best score & level  
+- Smooth falling animations for food & bombs  
+- Level progression & sound effects  
 
 ---
 
 ## 📸 Screenshots
-
-### 1️⃣ Start Screen
-![Start Screen](assets/1.png)
-
-### 2️⃣ Game Interface
-![Game Interface](assets/2.png)
-
-### 3️⃣ Scoreboard & Game Over
-![Game Over](assets/3.png)
+**Start Screen:**  
+![Start](assets/1.png)  
+**Game Interface:**  
+![Game](assets/2.png)  
+**Game Over:**  
+![Game Over](assets/3.png)  
 
 ---
 
@@ -41,4 +37,11 @@ Built using **HTML, CSS, and JavaScript**.
 
 ---
 
+## ⚙️ How to Run
+1. Clone or download repo  
+2. Ensure `assets/` folder has images and sounds (`food1.png…`, `Bomb.png`, `eat.mp3`, `blast.mp3`, `levelpass.mp3`)  
+3. Open `index.html` in a browser and click **Start**
 
+---
+
+Made with ❤️ using **HTML, CSS, JS**.
